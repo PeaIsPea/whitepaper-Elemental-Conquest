@@ -14,40 +14,9 @@
 - **Community DAO**: $CUP holders shape the game’s development direction.
 - **AI Anti-Cheat**: Real-time behavior monitoring, auto-ban system for cheaters and bots.
 
-## 🛠️ Project Structure
 
 ```
-elemental-conquest/
-│
-├── index.html                # Official Whitepaper (Vietnamese version)
-├── css/
-│   └── style.css             # UI and visual effects
-├── imgs/
-│   ├── logo-trans.png        # Main game logo
-│   ├── cup.png               # $CUP token symbol
-│   └── cc.png                # $CC token symbol
-└── js/
-    └── (coming soon)         # Language switcher & interactivity scripts
-```
 
-## 🌐 View the Whitepaper
-
-- Whitepaper (Vietnamese): [index.html](./index.html)
-- Trailer: [Watch here](https://www.youtube.com/watch?v=SxFLwiPN6Gs)
-
-## 🧪 Run Locally
-
-```bash
-git clone https://github.com/your-username/elemental-conquest.git
-cd elemental-conquest
-# Open index.html with any modern browser
-```
-
-Or launch with VSCode Live Server:
-
-```bash
-# Install Live Server extension
-# Open index.html and click "Go Live"
 ```
 
 ## 🧭 Development Roadmap (2025–2026)
