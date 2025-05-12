@@ -528,3 +528,10 @@ h1, h2 {
     height: 18px;
   }
 }
+section img {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng của phần tử chứa */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Giúp dễ căn giữa và kiểm soát layout */
+    margin-left: auto; /* Căn giữa ảnh */
+    margin-right: auto; /* Căn giữa ảnh */
+}
