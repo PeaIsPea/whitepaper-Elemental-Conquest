@@ -1,0 +1,530 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Default text color */
+    background: black; /* Black background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: 1.6; /* Increased line spacing for readability */
+}
+
+.container {
+    backdrop-filter: blur(5px); /* Light blur for background stars */
+    background: rgba(255, 255, 255, 0.03); /* Very transparent, slightly brighter */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Slightly lighter border */
+    border-radius: 20px;
+    /* Đổ bóng vàng cam mờ */
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.15);
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto; /* Center and add top/bottom margin */
+}
+
+section {
+    padding: 20px 0; /* Keep vertical padding, remove horizontal padding handled by container */
+}
+
+/* Specific style for the div containing token images and headings */
+/* Requires adding class="token-display" to the div in HTML */
+.token-display {
+    display: flex;
+    justify-content: space-around; /* Center items with space around */
+    align-items: center; /* Align items vertically center */
+    padding-top: 20px;
+    /* Removed fixed height */
+}
+
+/* Style for token images inside token-display */
+.token-display img {
+     display: block; /* Remove extra space below image */
+     margin: 0 auto 10px; /* Center image and add space below */
+}
+
+/* Adjust style for ul/h3 inside token-display if needed */
+.token-display h3 {
+    text-align: center;
+    margin: 0; /* Remove default h3 margins */
+    color: #facc15; /* Yellow color for token names (giữ lại màu vàng) */
+}
+
+.token-display ul { /* Applies to the ul containing the token image within h3 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Styles for Headings */
+h1, h2 {
+    color: #FFA500; /* Màu cam phát sáng cho tiêu đề */
+    /* Đổ bóng vàng cam mờ */
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 20px; /* Space below headings */
+    
+}
+
+h2 {
+    font-size: 1.6em; /* Smaller size than h1 */
+    /* Đường viền vàng cam mờ dưới h2 */
+    border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+    padding-bottom: 10px; /* Space between text and bottom border */
+}
+
+/* List Styles */
+ul {
+    margin-left: 20px;
+    padding-left: 0; /* Remove default ul padding */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+    color: #eee; /* Light grey text color for list items */
+}
+
+/* Background Canvas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Language Selector Button Styles */
+.container .language-selector button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    /* Viền vàng cam */
+    border: 1px solid rgba(255, 165, 0, 0.6);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    color: #FFA500; /* Màu chữ vàng cam */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease-in-out, border-color 0.3s ease;
+}
+
+.container .language-selector button:hover {
+    background-color: #facc15; /* Nền vàng khi hover (giữ lại màu vàng) */
+    color: black; /* Chữ đen khi hover */
+    border-color: #facc15;
+    transform: scale(1.05);
+}
+
+
+/* --- Trailer Container Styles --- */
+.trailer-container {
+    margin: 40px auto; /* Space above/below and center container */
+    max-width: 900px; /* Đảm bảo container đủ rộng */
+    text-align: center; /* Căn giữa iframe */
+}
+
+/* Responsive iframe (Optional - Makes video resize better on small screens) */
+.trailer-container iframe {
+    display: block; /* Loại bỏ khoảng trống dưới iframe */
+    margin: 0 auto; /* Căn giữa iframe trong container */
+
+    /* CHỈNH KÍCH THƯỚC TRAILER TẠI ĐÂY */
+    /* Kích thước ban đầu: */
+    width: 800px;
+    height: 450px;
+
+    /* Ví dụ tăng kích thước (giữ tỷ lệ 16:9): */
+    /* width: 900px; */
+    /* height: 506px; /* (900 * 9 / 16 ≈ 506) */
+
+    /* Hoặc tăng chiều cao lên 550px và điều chỉnh chiều rộng theo tỷ lệ: */
+     width: 978px; /* (550 * 16 / 9 ≈ 978) */
+     height: 550px;
+
+
+    max-width: 100%; /* Vẫn đảm bảo video không tràn ra ngoài trên màn hình nhỏ */
+    /* Nếu bạn sử dụng responsive CSS với height: auto; trước đó,
+       việc đặt width và height cố định ở đây sẽ ghi đè height: auto; */
+    /* height: auto; /* Bỏ hoặc ghi đè cái này nếu đặt height cố định */
+}
+
+/* --- Improved Roadmap Styles --- */
+.roadmap-frame {
+    /* Viền vàng cam sáng */
+    border: 2px solid rgba(255, 165, 0, 0.7);
+    padding: 30px; /* Increased padding */
+    margin: 40px auto; /* Increased margin, center */
+    border-radius: 15px; /* More rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker transparent background */
+    /* Đổ bóng vàng cam mạnh */
+    box-shadow: 0 0 35px rgba(255, 165, 0, 0.5);
+    max-width: 800px; /* Optional: Limit roadmap width */
+}
+
+.roadmap-frame h2 {
+    text-align: center;
+    color: #FFA500; /* Màu tiêu đề vàng cam */
+    margin-bottom: 30px; /* Space below title */
+    padding-bottom: 15px; /* Padding below title */
+    /* Đường viền vàng cam dưới tiêu đề */
+    border-bottom: 1px solid rgba(255, 165, 0, 0.3);
+    font-size: 1.8em; /* Larger font size */
+    /* Đổ bóng text vàng cam mạnh */
+    text-shadow: 0 0 15px rgba(255, 165, 0, 0.9);
+}
+
+.roadmap-frame ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for main Phase list items */
+.roadmap-frame > ul > li {
+    margin-bottom: 35px; /* Larger space between phases */
+    color: #ffffff; /* White text for main phases */
+    font-size: 1.3em; /* Larger font size for main phases */
+    font-weight: bold; /* Bold text */
+    position: relative; /* For custom bullet */
+    padding-left: 35px; /* Space for custom bullet */
+    line-height: 1.4; /* Increased line height */
+}
+
+/* Custom bullet for main Phase list items */
+.roadmap-frame > ul > li::before {
+    content: '✨'; /* Icon or character */
+    position: absolute;
+    left: 0;
+    color: #facc15; /* Màu vàng cho bullet chính (giữ lại màu vàng) */
+    font-size: 1.6em;
+    top: -8px; /* Adjust vertical position */
+    transform: rotate(10deg); /* Slight rotation */
+}
+
+/* Style for nested lists within each phase */
+.roadmap-frame ul ul {
+    margin-top: 12px;
+    margin-left: 15px; /* Indent for sub-items */
+    /* Thêm viền trái vàng cam mờ */
+    border-left: 2px solid rgba(255, 165, 0, 0.4);
+    padding-left: 15px; /* Padding after border */
+    list-style: none; /* Remove default list style */
+    color: #eee; /* Lighter grey text for sub-items */
+    font-size: 1em;
+    font-weight: normal; /* Ensure not bold */
+}
+
+.roadmap-frame ul ul li {
+     margin-bottom: 8px; /* Space between sub-items */
+     color: #ddd; /* Slightly darker grey for sub-items */
+     position: relative;
+     padding-left: 15px; /* Space for custom bullet */
+}
+
+/* Custom bullet for sub-items */
+.roadmap-frame ul ul li::before {
+    content: '•'; /* Dot bullet */
+    color: #FFA500; /* Màu vàng cam cho bullet con */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1; /* Ensure good alignment */
+}
+
+
+/* --- Footer Styles --- */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px 20px; /* Top, Right/Left, Bottom */
+    margin-top: 60px; /* Increased space above footer */
+    color: #bbb; /* Lighter grey text for footer */
+    /* Đường viền vàng cam mờ phía trên */
+    border-top: 1px solid rgba(255, 165, 0, 0.2);
+    font-size: 0.9em;
+}
+
+.site-footer p {
+    margin-bottom: 20px; /* Space between copyright and social links */
+    color: #ccc; /* Slightly darker grey for copyright text */
+}
+
+.social-links {
+    margin-top: 15px; /* Space above social links */
+}
+
+.social-links a {
+    display: inline-block; /* Arrange icons horizontally */
+    margin: 0 12px; /* Space between icons */
+    /* Removed inline styles from HTML */
+}
+
+/* Style for Font Awesome icons */
+.social-links a i {
+    /* Default icon color */
+    color: #FFA500; /* Màu vàng cam theme */
+    /* Icon size (Font Awesome uses font-size) */
+    font-size: 28px; /* Icon size */
+    /* Vertical alignment */
+    vertical-align: middle;
+    /* Hover transition */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for icons */
+.social-links a:hover i {
+    /* Change color on hover */
+    color: #facc15; /* Màu vàng khi hover (giữ lại màu vàng) */
+    transform: scale(1.2); /* Slightly larger on hover */
+}
+
+.chup-link {
+  background-color: #111;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  border-top: 1px solid #333;
+}
+.chup-link p {
+    margin: 0;
+}
+
+.chup-link a {
+  color: #00BFFF; /* Màu xanh dương cơ bản cho link */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: bold; /* Làm chữ đậm */
+  /* Có thể thêm transition màu nếu muốn hiệu ứng đơn giản khi hover */
+  transition: color 0.3s ease;
+  
+}
+
+.chup-link a:hover {
+  color: #FF4500;
+}
+
+.chup-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  filter: drop-shadow(0 0 3px #00ffff);
+  animation: glowImg 2.5s infinite ease-in-out;
+}
+
+
+
+
+/* --- Các hiệu ứng hay ho --- */
+
+/* 1. Hiệu ứng phát sáng mạnh hơn khi hover vào biểu tượng mạng xã hội */
+.social-links a:hover i {
+    color: #facc15; /* Giữ màu vàng khi hover */
+    transform: scale(1.4); /* Phóng to hơn một chút */
+    /* Thêm hiệu ứng đổ bóng phát sáng */
+    filter: drop-shadow(0 0 8px #facc15);
+    /* Đảm bảo transition đã được định nghĩa trong quy tắc .social-links a i */
+}
+
+/* 2. Hiệu ứng phát sáng nhấp nháy nhẹ cho các tiêu đề chính (H1, H2) */
+/* Định nghĩa animation phát sáng */
+@keyframes pulse-glow-orange {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 165, 0, 0.7); /* Độ sáng ban đầu */
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8); /* Sáng mạnh hơn ở giữa animation */
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 165, 0, 0.7); /* Trở về độ sáng ban đầu */
+    }
+}
+
+/* Áp dụng animation vào các tiêu đề */
+h1, h2 {
+    /* Giữ lại các style hiện có */
+    color: #FFA500;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7); /* Đảm bảo có đổ bóng ban đầu */
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* ... các style khác ... */
+
+    /* Thêm dòng animation */
+    animation: glow-elements-five 20s infinite ease-in-out; /* Tên animation, thời gian (2s), lặp vô hạn, chạy xuôi ngược, gia tốc */
+}
+
+/* 3. Hiệu ứng viền và bóng đổ container nhấp nháy nhẹ */
+/* Định nghĩa animation viền và bóng đổ */
+@keyframes glow-elements-five {
+    0% {
+        color: #ffffff; /* Kim - trắng */
+        text-shadow: 0 0 10px #ffffff;
+    }
+    20% {
+        color: #00BFFF; /* Thủy - xanh dương */
+        text-shadow: 0 0 15px #00BFFF;
+    }
+    40% {
+        color: #32CD32; /* Mộc - xanh lá */
+        text-shadow: 0 0 15px #32CD32;
+    }
+    60% {
+        color: #FF4500; /* Hỏa - đỏ cam */
+        text-shadow: 0 0 15px #FF4500;
+    }
+    80% {
+        color: #DAA520; /* Thổ - vàng đất */
+        text-shadow: 0 0 15px #DAA520;
+    }
+    100% {
+        color: #ffffff; /* Quay lại Kim */
+        text-shadow: 0 0 10px #ffffff;
+    }
+}
+
+
+@keyframes pulse-border-elements {
+    0% {
+        border-color: #e5e5e5;
+        box-shadow: 0 0 20px #e5e5e5;
+    }
+    20% {
+        border-color: #38bdf8;
+        box-shadow: 0 0 25px #38bdf8;
+    }
+    40% {
+        border-color: #4ade80;
+        box-shadow: 0 0 25px #4ade80;
+    }
+    60% {
+        border-color: #f87171;
+        box-shadow: 0 0 30px #f87171;
+    }
+    80% {
+        border-color: #eab308;
+        box-shadow: 0 0 30px #eab308;
+    }
+    100% {
+        border-color: #e5e5e5;
+        box-shadow: 0 0 20px #e5e5e5;
+    }
+}
+
+/* Hiệu ứng chớp chớp */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #00ffff; color: #00ffff; }
+  50% { text-shadow: 0 0 20px #ffffff; color: #fff; }
+  100% { text-shadow: 0 0 5px #00ffff; color: #00ffff; }
+}
+/* Hiệu ứng chớp chớp cho ảnh */
+@keyframes glowImg {
+  0% {
+    filter: drop-shadow(0 0 2px #00ffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #ffffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px #00ffff);
+  }
+}
+
+/* Áp dụng animation vào container chính */
+.container {
+    /* Giữ lại các style hiện có */
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.03);
+    /* ... các style khác ... */
+
+    /* Thêm dòng animation */
+     animation: pulse-border-elements 20s infinite ease-in-out; /* Tên animation, thời gian (3s), lặp vô hạn */
+}
+
+/* Bạn có thể thêm các hiệu ứng khác tương tự cho các phần tử khác nếu muốn */
+
+
+/* ========== Responsive Styles ========== */
+
+@media (max-width: 1024px) {
+    .container,
+    .trailer-container,
+    .roadmap-frame {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .trailer-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .token-display {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .roadmap-frame > ul > li {
+        font-size: 1.1em;
+        padding-left: 28px;
+    }
+
+    .roadmap-frame > ul > li::before {
+        font-size: 1.3em;
+        top: -6px;
+    }
+
+    .language-selector {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container .language-selector button {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .roadmap-frame h2 {
+        font-size: 1.5em;
+    }
+
+    .roadmap-frame {
+        padding: 20px;
+    }
+
+    .site-footer {
+        font-size: 0.8em;
+        padding: 30px 15px 15px;
+    }
+
+    .social-links a {
+        margin: 0 8px;
+    }
+
+    .social-links a i {
+        font-size: 24px;
+    }
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .chup-link {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+
+  .chup-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

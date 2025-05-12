@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elemental Conquest – Web3 Battle Royale Kỹ Năng Cốt Lõi - Whitepaper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="LOGOPOSTER.jpg" type="image/x-icon">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="container">
+        <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 10;">
+            <button onclick="changeLanguage('vi')" style="padding: 8px 12px; margin-right: 5px; cursor: pointer;">Tiếng Việt</button>
+            <button onclick="changeLanguage('en')" style="padding: 8px 12px; cursor: pointer;">English</button>
+        </div>
+
+        <section style="text-align: center">
+            <img src="imgs/logo-trans.png" alt="Elemental Conquest Logo">
+            <h1 data-i18n="game_title">Elemental Conquest – Web3 Battle Royale Kỹ Năng Cốt Lõi</h1>
+        </section>
+        <div class="trailer-container">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/SxFLwiPN6Gs?si=yLijw6SKtr3BMcZy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+        <section>
+            <h2 data-i18n="overview_title">1. Giới thiệu tổng quan</h2>
+            <p data-i18n="overview_content">Trong một vũ trụ được khai sinh từ vụ nổ Big Bang, 5 luồng sáng đại diện cho Ngũ Hành (Kim – Mộc – Thủy – Hỏa – Thổ) đã phân tách, tạo nên các chiều không gian khác biệt. Giữa thời kỳ hỗn loạn, chiến tranh hoang lạc bùng nổ khi các chiều không gian va chạm, các thực thể cổ xưa xuất hiện để tranh giành 5 viên đá Ngũ Hành huyền thoại – nguồn sức mạnh vô song có thể định đoạt vận mệnh vũ trụ. Người chơi sẽ vào vai các anh hùng của thế giới, chọn theo phe thiện hoặc ác, lao vào đấu trường sinh tử nhằm giành lấy quyền lực tối cao.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="gameplay_title">2. Gameplay chính</h2>
+            <ul>
+                <li data-i18n="gameplay_type">Thể loại: Battle Royale – 100 người chơi, vòng bo, loot đồ, sinh tồn.</li>
+                <li data-i18n="gameplay_modes">Chế độ chơi:
+                    <ul>
+                        <li data-i18n="gameplay_modes_solo_squad">Solo / Đội (2–5 người)</li>
+                        <li data-i18n="gameplay_modes_casual_ranked">Đấu thường / Xếp hạng (chỉ PvP)</li>
+                    </ul>
+                    <ul>
+                        <li data-i18n="gameplay_pve">+ PvE: Dành cho người chơi mới hoặc chưa đủ điều kiện vào PvP. Có thể chơi solo/team, chiến đấu với quái và boss theo map.</li>
+                        <li data-i18n="gameplay_pvpranked">+ PvP Đấu hạng: Mở khóa khi người chơi đạt cấp độ nhất định và hoàn thành thử thách PvE.</li>
+                    </ul>
+                </li>
+                <li data-i18n="gameplay_map">Map: Có map PvE riêng và map PvP chuyên biệt.</li>
+                <li data-i18n="gameplay_ranking">Hệ thống xếp hạng:
+                    <ul>
+                        <li data-i18n="gameplay_ranking_points1_5">Top1: +50đ | Top2: +40đ | Top3: +30đ | Top4: +25đ | Top5: +20đ</li>
+                        <li data-i18n="gameplay_ranking_points6_10">Top6: +10đ | Top7: +5đ | Top8–10: Không trừ điểm</li>
+                        <li data-i18n="gameplay_ranking_points11_100">Top11–100: Bị trừ điểm, càng thấp trừ càng nhiều (Top 50: -5, Top 80: -15, Top 100: -1 rank)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="player_journey_title">3. Hành trình người chơi</h2>
+            <ol>
+                <li data-i18n="journey_step1">Tạo tài khoản + ví Web3 tích hợp (Metamask, WalletConnect).</li>
+                <li data-i18n="journey_step2">Tạo nhân vật → Chọn hệ Ngũ Hành.</li>
+                <li data-i18n="journey_step3">Tham gia chế độ PvE để làm quen và lên cấp.
+                    <ul>
+                        <li data-i18n="journey_step3_sub1">- Nhiệm vụ ngày/tuần (tiêu diệt boss, vượt map).</li>
+                        <li data-i18n="journey_step3_sub2">- Nhận $CC token, nguyên liệu chế tạo NFT.</li>
+                    </ul>
+                </li>
+                <li data-i18n="journey_step4">Hoàn thành thử thách để mở khóa PvP xếp hạng.</li>
+                <li data-i18n="journey_step5">Đấu PvP để tích điểm, nhận phần thưởng $CUP + vật phẩm đặc biệt.</li>
+                <li data-i18n="journey_step6">Dùng $CUP để craft NFT hoặc stake nhận phần thưởng.</li>
+                <li data-i18n="journey_step7">Tham gia DAO để góp ý cập nhật, sự kiện.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 data-i18n="elements_class_title">4. Hệ thống Ngũ Hành & Class</h2>
+            <ul>
+                <li data-i18n="elements_class_item1">Khi tạo nhân vật, người chơi chọn 1 trong 5 dòng máu Ngũ Hành (Kim, Mộc, Thủy, Hỏa, Thổ).</li>
+                <li data-i18n="elements_class_item2">Mỗi hệ có ưu/nhược điểm khác nhau và có hệ thống khắc chế vòng tròn.</li>
+                <li data-i18n="elements_class_item3">Tổ đội đủ 5 hệ sẽ kích hoạt 'Ngũ Hành Trận'.</li>
+                <li data-i18n="elements_class_item4">Loot đặc biệt: Đá Ngũ Hành dùng để kích hoạt tuyệt kỹ một lần trong trận.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="weapons_items_title">5. Vũ khí & Vật phẩm</h2>
+            <ul>
+                <li data-i18n="weapons_items_item1">Chủ yếu là vũ khí cận chiến: Kiếm, dao, rìu, thương, nỏ, cung, găng tay, giày bay, cánh thiên thần...</li>
+                <li data-i18n="weapons_items_item2">Vũ khí tầm xa hiện đại (súng) rất hiếm, chỉ có trong “ánh sáng ân huệ giáng từ trên trời xuống”.(Drop ngẫu nhiên vị trí trên map khi số lượng người chơi còn 30/100)</li>
+                <li data-i18n="weapons_items_item3">Game nhấn mạnh yếu tố kỹ năng, không có skin tăng sát thương.</li>
+            </ul>
+        </section>
+
+        <section>
+    <h2 data-i18n="tokenomics_nft_title">6. Tokenomics & NFT</h2>
+    <ul>
+        <li data-i18n="tokenomics_nft_item1">Token chính: $CUP – dùng để mua các vật phẩm NFT có hiệu ứng đẹp, giá trị cao (skin đặc biệt).</li>
+        <li data-i18n="tokenomics_nft_item2">Token phụ: $CC – dùng để mua các skin thông thường, không có hiệu ứng.</li>
+        <li data-i18n="tokenomics_nft_item3">Mỗi giao dịch NFT bằng $CUP sẽ đốt 2% token nhằm giảm lạm phát và tăng giá trị.</li>
+    </ul>
+    <div class="token-display">  <h3 class="cup">
+            <span data-i18n="cup_token">$CUP</span>
+            <ul><img src="imgs/cup.png" alt="$CUP Token" width="200" height="200"></ul>
+        </h3>
+        <h3 class="cc">
+            <span data-i18n="cc_token">$CC</span>
+            <ul><img src="imgs/cc.png" alt="$CC Token" width="200" height="200"></ul>
+        </h3>
+
+    </div>
+</section>
+
+        <section>
+            <h2 data-i18n="crafting_nft_title">7. Crafting NFT bằng $CUP</h2>
+            <ul>
+                <li data-i18n="crafting_nft_item1">Kết hợp $CUP + nguyên liệu từ PvE/PvP để chế tạo NFT vũ khí, skin, hiệu ứng.</li>
+                <li data-i18n="crafting_nft_item2">NFT có thể giao dịch, sử dụng trong game hoặc burn để nâng cấp NFT khác.</li>
+                <li data-i18n="crafting_nft_item3">Cơ chế crafting gồm: chọn loại vật phẩm → thêm nguyên liệu → xác suất thành công.</li>
+            </ul>
+        </section>
+
+           <section>
+            <h2 data-i18n="new_pve_title">8. PvE chế độ mới</h2>
+            <ul>
+                <li data-i18n="new_pve_type">Thể loại: Đánh quái, vượt ải, tiêu diệt boss.</li>
+                <li data-i18n="new_pve_objective">Mục tiêu:
+                    <ul>
+                        <li data-i18n="new_pve_objective_sub1">+ Cung cấp trải nghiệm nhập môn.</li>
+                        <li data-i18n="new_pve_objective_sub2">+ Trao thưởng nguyên liệu chế NFT, token $CC.</li>
+                        <li data-i18n="new_pve_objective_sub3">+ Là 'bước đệm' trước khi vào đấu hạng.</li>
+                    </ul>
+                </li>
+                 <li data-i18n="new_pve_unlock_pvp">Thành tựu mở khóa PvP:
+                    <ul>
+                        <li data-i18n="new_pve_unlock_pvp_sub1">+ Cấp độ tối thiểu: 10.</li>
+                        <li data-i18n="new_pve_unlock_pvp_sub2">+ Vượt 3 ải PvE boss + hoàn thành 5 nhiệm vụ tuần.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2 data-i18n="dao_title">9. DAO cộng đồng</h2>
+            <ul>
+                <li data-i18n="dao_item1">Chủ sở hữu $CUP có quyền tham gia quản trị game thông qua DAO:
+                    <ul>
+                         <li data-i18n="dao_item1_sub1">bình chọn nội dung mới, quyết định cập nhật, sự kiện.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-i18n="anti_hack_security_title">10. Biện pháp chống hack</h2>
+            <ul>
+                <li data-i18n="anti_hack_security_item1">Giao dịch bằng ví phi tập trung (Metamask, WalletConnect).</li>
+                <li data-i18n="anti_hack_security_item2">Hash trạng thái client gửi về server phát hiện gian lận.</li>
+                <li data-i18n="anti_hack_security_item3">Giám sát hành vi bất thường bằng AI:
+                    <ul>
+                        <li data-i18n="anti_hack_security_item3_sub1">+ Sử dụng hệ thống Machine Learning để huấn luyện mô hình phân loại hành vi người chơi (bình thường, nghi ngờ, gian lận).</li>
+                        <li data-i18n="anti_hack_security_item3_sub2">+ Mô hình học từ dữ liệu log hành vi: số lần click, thời gian phản hồi, đường di chuyển, tốc độ di chuyển…</li>
+                        <li data-i18n="anti_hack_security_item3_sub3">+ Áp dụng các thuật toán như Random Forest, XGBoost hoặc mạng nơ-ron tích chập (CNN) để phân tích dữ liệu theo thời gian thực.</li>
+                           <li data-i18n="anti_hack_security_item3_sub4">+ Cảnh báo và tự động khóa tài khoản nếu phát hiện hành vi gian lận rõ ràng.</li>
+                    </ul>
+                </li>
+                <li data-i18n="anti_hack_security_item4">Tài sản NFT được lưu on-chain để đảm bảo minh bạch.</li>
+            </ul>
+        </section>
+
+        <section class="roadmap-frame">
+     <h2 data-i18n="roadmap_title">🛣️ Lộ Trình Phát Triển – Elemental Conquest</h2>
+     <ul>
+         <li data-i18n="roadmap_phase1">Giai đoạn 1: Tiền sản xuất & Xây dựng nền tảng (Q2 – Q3/2025)
+             <ul>
+                 <li data-i18n="roadmap_phase1_item1">Hoàn thiện kịch bản, thế giới quan & hệ thống Ngũ Hành.</li>
+                 <li data-i18n="roadmap_phase1_item2">Thiết kế concept art, prototype nhân vật, vũ khí, kỹ năng.</li>
+                 <li data-i18n="roadmap_phase1_item3">Phát triển MVP (PvE + hệ thống ví Web3 tích hợp).</li>
+                 <li data-i18n="roadmap_phase1_item4">Ra mắt website chính thức & mở cộng đồng Discord/Telegram.</li>
+             </ul>
+         </li>
+         <li data-i18n="roadmap_phase2">Giai đoạn 2: Phát hành bản Alpha (Q4/2025)
+             <ul>
+                 <li data-i18n="roadmap_phase2_item1">Mở test PvE cho người chơi sớm (Closed Alpha).</li>
+                 <li data-i18n="roadmap_phase2_item2">Hoàn thiện hệ thống loot, nhiệm vụ, token $CC.</li>
+                 <li data-i18n="roadmap_phase2_item3">Tích hợp crafting NFT cơ bản & marketplace sơ khai.</li>
+                 <li data-i18n="roadmap_phase2_item4">Mở tính năng staking $CUP, whitelist cho NFT Genesis.</li>
+             </ul>
+         </li>
+         <li data-i18n="roadmap_phase3">Giai đoạn 3: PvP & Xếp hạng chính thức (Q1/2026)
+             <ul>
+                 <li data-i18n="roadmap_phase3_item1">Mở chế độ PvP đấu hạng + bản đồ chuyên biệt.</li>
+                 <li data-i18n="roadmap_phase3_item2">Kích hoạt hệ thống rank, phần thưởng theo thứ hạng.</li>
+                 <li data-i18n="roadmap_phase3_item3">Ra mắt hệ thống “Ngũ Hành Trận” tổ đội.</li>
+                 <li data-i18n="roadmap_phase3_item4">Niêm yết token $CUP trên các sàn DEX lớn (Raydium, Uniswap...).</li>
+             </ul>
+         </li>
+         <li data-i18n="roadmap_phase4">Giai đoạn 4: DAO & Cộng đồng hóa (Q2/2026)
+             <ul>
+                 <li data-i18n="roadmap_phase4_item1">Ra mắt DAO quản trị game – bỏ phiếu nội dung, sự kiện.</li>
+                 <li data-i18n="roadmap_phase4_item2">Tổ chức giải đấu PvP mùa đầu tiên với giải thưởng lớn.</li>
+                 <li data-i18n="roadmap_phase4_item3">Hợp tác KOLs/Web3 guilds mở rộng người chơi toàn cầu.</li>
+                 <li data-i18n="roadmap_phase4_item4">Ra mắt mobile version (Android / iOS).</li>
+             </ul>
+         </li>
+         <li data-i18n="roadmap_phase5">Giai đoạn 5: Mở rộng vũ trụ (Q3 – Q4/2026)
+             <ul>
+                 <li data-i18n="roadmap_phase5_item1">Cập nhật class mới & vùng đất nguyên tố bị phong ấn.</li>
+                 <li data-i18n="roadmap_phase5_item2">Mở rộng PvE thành chế độ co-op nhiều người, boss thế giới.</li>
+                 <li data-i18n="roadmap_phase5_item3">Ra mắt hệ thống pet + NFT companion.</li>
+                 <li data-i18n="roadmap_phase5_item4">Xây dựng phiên bản VR/AR trong tương lai.</li>
+             </ul>
+         </li>
+     </ul>
+ </section>
+    <footer class="site-footer">
+        <p data-i18n="footer_copyright">&copy; 2025 Elemental Conquest. Bảo lưu mọi quyền.</p>
+        <div class="social-links">
+            <a href="https://github.com/PeaIsPea" target="_blank" style="margin: 0 10px; color: #333;">
+                <i class="fa-brands fa-github fa-beat" style="color: #c5cfd7;"></i>
+            </a>
+            <a href="https://www.facebook.com/html.html.2dasd/" target="_blank" style="margin: 0 10px; color: #3b5998;">
+                <i class="fa-brands fa-facebook fa-beat" style="color: #c5cfd7;"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=SxFLwiPN6Gs&t=4s" target="_blank" style="margin: 0 10px; color: #3b5998;">
+                <i class="fa-brands fa-youtube fa-beat" style="color: #c5cfd7;"></i>
+            </a>
+            
+        </div>
+    </footer>
+    </div> 
+    <div class="chup-link">
+    <p>
+        <img src="imgs/chup_icon.png" alt="CHUP Icon" class="chup-icon" />
+        <span data-i18n="chupLink">
+            Tìm hiểu thêm về dự án khác của chúng tôi: <a href="https://peaispea.github.io/whitepaper-CHUP/" target="_blank">CHUP</a>
+        </span>
+    </p>
+</div>
+</div>
+
+    </div>
+    
+
+
+    <script src="js/background.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Assuming currentLanguage is defined elsewhere, possibly in i18n.js
+            // loadLanguage(currentLanguage); // Load default language when page loads
+            // Or set a default language if not already set
+             loadLanguage('vi'); // Load Vietnamese by default
+        });
+    </script>
+</body>
+</html>
